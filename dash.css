@@ -1,0 +1,136 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+body{
+    background: #dfdfe0;
+    margin-top: 10px;
+}
+
+
+.dashboard .box-container{
+    
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    display: grid;
+    gap: 1.5rem;
+}
+
+.dashboard .box-container img{
+    width: 40%;
+    box-sizing: border-box;
+    
+}
+
+#class{
+    text-align: right;
+    padding: 50px;
+    box-sizing: border-box;
+    margin-left: 1px;
+}
+
+.profile{
+    margin-bottom: 30px;
+    text-align: center;
+}    
+
+.profile img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+
+}
+
+.profile h3{
+    color: rgb(44, 74, 90);
+    margin: 10px 0 5px;
+}
+
+
+
+.wrapper .sidebar{
+    background: rgb(6, 19, 36);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+.wrapper .sidebar ul li a{
+    display: flex;
+    padding: 13px 30px;
+    border-bottom: 1px;
+    color: rgb(44, 74, 90);
+    font-size: 15px;
+    position: relative;
+    text-transform: uppercase;
+    
+}
+
+.wrapper .sidebar ul li a .icon{
+    display:list-item;
+    width: 30px;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a:active{
+    color: wheat;
+    background: white;
+    border-right: 2px;
+}
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a:active:before{
+    display: block;
+}
+
+.section{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+.section .navbar{
+    background: rgb(31, 13, 87);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    justify-content: right;
+
+}
+.wrapper .section .navbar .hamburger a{
+    font-size: 28px;
+    color: #f2f3f6;
+}
+.wrapper .section .navbar .hamburger a:hover{
+    color: #f5f6fa;
+}
+.section .navbar a{
+    float: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+body.active .wrapper .sidebar{
+    left: -225px;
+}
+
+body.active .wrapper .section{
+    margin-left: 0;
+    width: 100%;
+}
+
+
